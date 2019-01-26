@@ -148,15 +148,28 @@
 
 .uk-offcanvas-bar {
   background-color: #000000;
-  width: 740px;
+  width: 680px;
 }
 
 .nav-item {
-  margin: 18px 34px;
+  margin: 0px 34px;
   border-bottom: 2px solid;
 }
 
+.nav-item:first-child {
+  border-top: 2px solid;
+}
+
 .nav-item > a {
-  font-size: 36px;
+  font-size: 46px;
   text-transform: uppercase;
+  color: #ffffff!important;
+}
+
+.social-icon {
+  font-size: 20px;
+}
+
+.white {
+  color: #ffffff;
 }

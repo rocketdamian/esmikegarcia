@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Demo</title>
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
   <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
   <link rel="stylesheet" href="css/esmikegarcia.css">
 </head>
@@ -13,9 +15,10 @@
 
   <div class="navbar-container-left">
     <div class="navbar-left">
-      <a class="uk-navbar-toggle navbar-button" href="#" uk-toggle="target: #offcanvas-overlay">
+      <a class="uk-navbar-toggle navbar-button" href="#offcanvas-overlay" uk-toggle>
         <p class="navbar-menu-label">MENÚ</p>
-        <span uk-navbar-toggle-icon class="navbar-button-menu"></span>
+        <span uk-navbar-toggle-icon id="nav-menu-open" class="navbar-button-menu"></span>
+        <button id="nav-menu-close" class="uk-close-large navbar-button-menu uk-hidden" type="button" uk-close></button>
       </a>
       <div class="navbar-social">
         <ul class="navbar-social-list">
@@ -29,7 +32,7 @@
             <span uk-icon="facebook"></span>
           </li>
           <li class="navbar-social-list-item">
-            <span uk-icon="soundcloud"></span>
+            <span class="fab fa-spotify social-icon"></span>
           </li>
           <li class="navbar-social-list-item">
             <span uk-icon="youtube"></span>
@@ -46,20 +49,38 @@
     <img class="uk-width-1-3@m uk-position-bottom-left uk-position-large large-logo" src="img/logo.png" />
   </div>
 
-  <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+  <div id="offcanvas-overlay" uk-offcanvas="mode: none" class="uk-animation-slide-left-medium">
     <div class="uk-offcanvas-bar">
 
-        <div class="">
+        <div>
             <a class="uk-navbar-item uk-logo" href="#">
               <img src="img/nav-logo.png"/>
             </a>
-            <ul class="uk-nav uk-nav-default">
+            <ul class="uk-nav uk-nav-default uk-margin-xlarge-bottom">
                 <li class="nav-item"><a href="#">Biografía</a></li>
                 <li class="nav-item"><a href="#">Blog</a></li>
                 <li class="nav-item"><a href="#">Calendario</a></li>
                 <li class="nav-item"><a href="#">Media (Prensa)</a></li>
                 <li class="nav-item"><a href="#">Contacto</a></li>
             </ul>
+
+            <div class="uk-margin-large uk-margin-large-left uk-margin-large-right uk-margin-remove-bottom">
+              <h3 class="uk-text-uppercase uk-text-center">Recibe todas las noticias de esmikegarcia a tu correo</h3>
+              <form class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                  <input class="uk-input" type="text" placeholder="NOMBRE">
+                </div>
+                <div class="uk-width-1-2@s">
+                  <input class="uk-input" type="email" placeholder="CORREO">
+                </div>
+              </form>
+              <div class="uk-flex-center uk-text-center" uk-grid>
+                <div>
+                  <button class="uk-button uk-button-primary">ENVIAR</button>
+                </div>
+              </div>
+              <p class="uk-text-uppercase uk-text-center white">Respetamos tu privacidad</p>
+            </div>
         </div>
 
     </div>
