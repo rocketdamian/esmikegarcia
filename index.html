@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Demo</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
   <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
@@ -15,12 +15,13 @@
 
   <div class="scroll-indicator"></div>
 
-  <div class="navbar-container-left">
+  <!--DESKTOP MENU-->
+  <div class="navbar-container-left uk-visible@s">
     <div class="navbar-left">
-      <a class="uk-navbar-toggle navbar-button" href="#offcanvas-overlay" uk-toggle>
+      <a class="uk-navbar-toggle navbar-button" >
         <p class="navbar-menu-label">MENÚ</p>
-        <span uk-navbar-toggle-icon id="nav-menu-open" class="navbar-button-menu"></span>
-        <button id="nav-menu-close" class="uk-close-large navbar-button-menu uk-hidden" type="button" uk-close></button>
+        <span uk-navbar-toggle-icon class="nav-menu-open navbar-button-menu"></span>
+        <button class="uk-close-large navbar-button-menu uk-hidden nav-menu-close" type="button" uk-close></button>
       </a>
       <div class="navbar-social">
         <ul class="navbar-social-list">
@@ -47,47 +48,72 @@
     </div>
   </div>
 
+  <!--MOBILE MENU-->
+  <nav class="uk-navbar uk-hidden@s uk-position-fixed nav-mobile">
+    <div class="uk-navbar-left">
+      <a class="uk-navbar-toggle white">
+        <span class="nav-menu-open" uk-navbar-toggle-icon></span>
+        <button class="uk-close-large uk-hidden nav-menu-close" type="button" uk-close></button>
+        <span class="uk-margin-small-left">MENÚ</span>
+      </a>
+    </div>
+  </nav>
+
   <div class="uk-background-cover uk-light uk-flex" uk-height-viewport style="background-image: url('img/background.jpg');">
-    <img class="uk-width-1-3@m uk-position-bottom-left uk-position-large large-logo" src="img/logo.png" />
+    <img class="uk-width-1-3@s uk-position-bottom-left uk-position-large large-logo uk-visible@s" src="img/logo.png" />
+    <img class="uk-width-1-3 uk-position-bottom-left uk-position-large uk-hidden@s" src="img/logo.png" />
   </div>
 
-  <div id="offcanvas-overlay" uk-offcanvas="mode: none" class="uk-animation-slide-left-medium">
-    <div class="uk-offcanvas-bar">
-        <div>
-            <a class="uk-navbar-item uk-logo" href="#">
-              <img src="img/nav-logo.png"/>
-            </a>
-            <ul class="uk-nav uk-nav-default uk-margin-xlarge-bottom">
-                <li class="nav-item"><a href="#">Biografía</a></li>
-                <li class="nav-item"><a href="#">Blog</a></li>
-                <li class="nav-item"><a href="#">Calendario</a></li>
-                <li class="nav-item"><a href="#">Media (Prensa)</a></li>
-                <li class="nav-item"><a href="#">Contacto</a></li>
-            </ul>
+  <div class="c-menu">
+    <div class="c-menu-wrap js-menu-wrap">
+      <div class="o-box uk-text-center">
+        <ul class="uk-nav uk-nav-default nav-menu">
+          <li class="nav-item"><a href="#">Biografía</a></li>
+          <li class="nav-item"><a href="#">Blog</a></li>
+          <li class="nav-item"><a href="#">Calendario</a></li>
+          <li class="nav-item"><a href="#">Media (Prensa)</a></li>
+          <li class="nav-item"><a href="#">Contacto</a></li>
+        </ul>
 
-            <div class="uk-margin-large uk-margin-large-left uk-margin-large-right uk-margin-remove-bottom">
-              <h3 class="uk-text-uppercase uk-text-center">Recibe todas las noticias de esmikegarcia a tu correo</h3>
-              <form class="uk-grid-small" uk-grid>
-                <div class="uk-width-1-2@s">
-                  <input class="uk-input" type="text" placeholder="NOMBRE">
-                </div>
-                <div class="uk-width-1-2@s">
-                  <input class="uk-input" type="email" placeholder="CORREO">
-                </div>
-              </form>
-              <div class="uk-flex-center uk-text-center" uk-grid>
-                <div>
-                  <button class="uk-button uk-button-primary">ENVIAR</button>
-                </div>
-              </div>
-              <p class="uk-text-uppercase uk-text-center white">Respetamos tu privacidad</p>
+        <div class="navbar-footer">
+          <h3 class="uk-text-uppercase uk-text-center white">Recibe todas las noticias de esmikegarcia a tu correo</h3>
+          <form class="uk-flex uk-flex-center uk-margin-bottom">
+            <input class="uk-input" type="text" placeholder="NOMBRE">
+            <input class="uk-input uk-margin-left" type="email" placeholder="CORREO">
+          </form>
+          <div class="uk-flex-center uk-text-center" uk-grid>
+            <div>
+              <button class="uk-button uk-button-default white">ENVIAR</button>
             </div>
+          </div>
+          <p class="uk-text-uppercase uk-text-center white">Respetamos tu privacidad</p>
         </div>
+
+      </div>
     </div>
   </div>
 
+
   <div class="uk-container">
-    Coming soon!
+      <div class="uk-section ">
+          <div class="uk-container">
+      
+              <h1 class="uk-text-uppercase">Blog / Noticias</h1>
+
+              <div class="uk-grid-match uk-child-width-1-3@m" uk-grid>
+                  <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  </div>
+                  <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  </div>
+                  <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                  </div>
+              </div>
+      
+          </div>
+      </div>
   </div>
 
   <script src="dist/bundle.js"></script>
