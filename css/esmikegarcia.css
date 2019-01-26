@@ -8,7 +8,7 @@
          url('../fonts/CenturyGothic.svg#CenturyGothic') format('svg');
 }
 
-body,h1,h2,h3,p {
+body,h1,h2,h3,h4,p {
   font-family: "CenturyGothic"!important;
 }
 
@@ -221,7 +221,7 @@ body,h1,h2,h3,p {
 
 @media (max-width: 640px) {
     .nav-item > a {
-        font-size: 34px;
+        font-size: 28px;
     }
 }
 
