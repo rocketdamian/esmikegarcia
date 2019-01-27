@@ -12,6 +12,11 @@ body,h1,h2,h3,h4,p {
   font-family: "CenturyGothic"!important;
 }
 
+a, .uk-icon {
+    transition: 0.3s;
+}
+
+
 .scroll-indicator {
   width: 100%;
   height: 100vh;
@@ -102,6 +107,12 @@ body,h1,h2,h3,h4,p {
   color: white;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) and (orientation: landscape) {
+    .navbar-button {
+        top: 0;
+    }
+}
+
 .navbar-menu-label {
   position: absolute;
   top: 0;
@@ -128,6 +139,13 @@ body,h1,h2,h3,h4,p {
   font-weight: 600;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) and (orientation: landscape) {
+    .navbar-social {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
 .navbar-social-list {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -139,9 +157,18 @@ body,h1,h2,h3,h4,p {
 
 .navbar-social-list-item {
   margin: 20px;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid white;
   border-radius: 50%;
+}
+
+.navbar-social-list-item {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navbar-social-list-item:hover {
+    opacity: 0.6;
 }
 
 .navbar-logo {
@@ -225,6 +252,12 @@ body,h1,h2,h3,h4,p {
     }
 }
 
+@media (min-width: 568px) and (max-width: 1024px) and (orientation: landscape) {
+    .nav-item > a {
+        font-size: 26px;
+    }
+}
+
 .nav-item > a:hover {
     opacity: 0.4;
 }
@@ -238,10 +271,23 @@ body,h1,h2,h3,h4,p {
   margin: auto;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) and (orientation: landscape) {
+    .navbar-footer {
+        display: none;
+    }
+}
+
 @media (max-width: 640px) {
     .navbar-footer {
         bottom: 60px;
         width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar-footer {
+        width: 50%;
+        bottom: 68px;
     }
 }
 
@@ -262,9 +308,29 @@ body,h1,h2,h3,h4,p {
     margin: auto;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) and (orientation: landscape) {
+    .nav-menu {
+        top: 20%;
+        width: 60%;
+    }
+}
+
 @media (max-width: 640px) {
     .nav-menu {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .reduce-xs {
+        font-size: 14px;
+        margin-top: 10px;
     }
 }
 
@@ -474,3 +540,15 @@ body,h1,h2,h3,h4,p {
   .c-menu-social__link:hover:before, .c-menu-social__link:focus:before {
     width: calc(100% - 20px);
   }
+
+
+.uk-heading-line>::after, .uk-heading-line>::before {
+    border-bottom: 3px solid #010101;
+}
+
+#content {
+    background-image: url('../img/content-backgroung.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 60px;
+}
