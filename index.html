@@ -1,274 +1,521 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>EsMikeGarcia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css"
+    />
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/esmikegarcia.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/brands.min.css">
-  <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
-  <link rel="stylesheet" href="css/esmikegarcia.css">
-</head>
+  <body>
+    <div class="scroll-indicator"></div>
 
-<body>
-
-  <div class="scroll-indicator"></div>
-
-  <!--DESKTOP MENU-->
-  <div class="navbar-container-left uk-visible@m">
-    <div class="navbar-left">
-      <a class="uk-navbar-toggle navbar-button">
-        <p class="navbar-menu-label">MENÚ</p>
-        <span uk-navbar-toggle-icon class="nav-menu-open navbar-button-menu"></span>
-        <button class="uk-close-large navbar-button-menu uk-hidden nav-menu-close" type="button" uk-close></button>
-      </a>
-      <div class="navbar-social">
-        <ul class="navbar-social-list">
-          <li class="navbar-social-list-item">
-            <a href="https://www.instagram.com/esmikegarcia/" target="_blank" class="uk-link-reset"><span uk-icon="instagram"></span></a>
-          </li>
-          <li class="navbar-social-list-item">
-            <a href="https://twitter.com/esmikegarcia" target="_blank" class="uk-link-reset"><span uk-icon="twitter"></span></a>
-          </li>
-          <li class="navbar-social-list-item">
-            <a href="https://www.facebook.com/EsMikeGarcia/" target="_blank" class="uk-link-reset"><span uk-icon="facebook"></span></a>
-          </li>
-          <li class="navbar-social-list-item">
-            <a href="#" target="_blank" class="uk-link-reset"><span class="fab fa-spotify social-icon"></span></a>
-          </li>
-          <li class="navbar-social-list-item">
-            <a href="#" target="_blank" class="uk-link-reset"><span uk-icon="youtube"></span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="navbar-logo">
-        <!-- <span>LOGO</span> -->
-      </div>
-    </div>
-  </div>
-
-  <!--MOBILE MENU-->
-  <nav class="uk-navbar uk-hidden@m uk-position-fixed nav-mobile">
-    <div class="uk-navbar-left">
-      <a class="uk-navbar-toggle white">
-        <span class="nav-menu-open" uk-navbar-toggle-icon></span>
-        <button class="uk-close-large uk-hidden nav-menu-close" type="button" uk-close></button>
-        <span class="uk-margin-small-left">MENÚ</span>
-      </a>
-    </div>
-  </nav>
-
-  <div class="uk-background-cover uk-light uk-flex" uk-height-viewport style="background-image: url('img/background.jpg');">
-    <img class="uk-width-1-3@s uk-position-bottom-left uk-position-large large-logo uk-visible@m" src="img/logo.png" />
-    <img class="uk-width-1-3 uk-width-1-4@s uk-position-bottom-left uk-position-large uk-hidden@m" src="img/logo.png" />
-  </div>
-
-  <div class="c-menu">
-    <div class="c-menu-wrap js-menu-wrap">
-      <div class="o-box uk-text-center">
-        <ul class="uk-nav uk-nav-default nav-menu">
-          <li class="nav-item"><a href="#">Biografía</a></li>
-          <li class="nav-item"><a href="#">Blog</a></li>
-          <li class="nav-item"><a href="#">Calendario</a></li>
-          <li class="nav-item"><a href="#">Media (Prensa)</a></li>
-          <li class="nav-item"><a href="#">Contacto</a></li>
-        </ul>
-        <div class="navbar-footer">
-          <div class="uk-flex uk-flex-between uk-hidden@s">
-            <a href="https://www.instagram.com/esmikegarcia/" target="_blank" class="uk-link-reset"><span uk-icon="instagram"></span></a>
-            <a href="https://twitter.com/esmikegarcia" target="_blank" class="uk-link-reset"><span uk-icon="twitter"></span></a>
-            <a href="https://www.facebook.com/EsMikeGarcia/" target="_blank" class="uk-link-reset"><span uk-icon="facebook"></span></a>
-            <a href="#" target="_blank" class="uk-link-reset"><span class="fab fa-spotify social-icon"></span></a>
-            <a href="#" target="_blank" class="uk-link-reset"><span uk-icon="youtube"></span></a>
-          </div>
-
-          <h3 class="uk-text-uppercase uk-text-center uk-visible@s white reduce-xs">Recibe todas las noticias de
-            esmikegarcia a
-            tu correo</h3>
-          <h4 class="uk-text-uppercase uk-text-center uk-hidden@s white reduce-xs">Recibe todas las noticias de
-            esmikegarcia a tu
-            correo</h4>
-          <form class="uk-flex uk-flex-center uk-margin-bottom">
-            <input class="uk-input" type="text" placeholder="NOMBRE">
-            <input class="uk-input uk-margin-left" type="email" placeholder="CORREO">
-          </form>
-          <div class="uk-flex-center uk-text-center" uk-grid>
-            <div>
-              <button class="uk-button uk-button-default white">ENVIAR</button>
-            </div>
-          </div>
-          <p class="uk-text-uppercase uk-text-center white reduce-xs">Respetamos tu privacidad</p>
+    <!--DESKTOP MENU-->
+    <div class="navbar-container-left uk-visible@m">
+      <div class="navbar-left">
+        <a class="uk-navbar-toggle navbar-button">
+          <p class="navbar-menu-label">MENÚ</p>
+          <span
+            uk-navbar-toggle-icon
+            class="nav-menu-open navbar-button-menu"
+          ></span>
+          <button
+            class="uk-close-large navbar-button-menu uk-hidden nav-menu-close"
+            type="button"
+            uk-close
+          ></button>
+        </a>
+        <div class="navbar-social">
+          <ul class="navbar-social-list">
+            <li class="navbar-social-list-item">
+              <a
+                href="https://www.instagram.com/esmikegarcia/"
+                target="_blank"
+                class="uk-link-reset"
+                ><span uk-icon="instagram"></span
+              ></a>
+            </li>
+            <li class="navbar-social-list-item">
+              <a
+                href="https://twitter.com/esmikegarcia"
+                target="_blank"
+                class="uk-link-reset"
+                ><span uk-icon="twitter"></span
+              ></a>
+            </li>
+            <li class="navbar-social-list-item">
+              <a
+                href="https://www.facebook.com/EsMikeGarcia/"
+                target="_blank"
+                class="uk-link-reset"
+                ><span uk-icon="facebook"></span
+              ></a>
+            </li>
+            <li class="navbar-social-list-item">
+              <a href="#" target="_blank" class="uk-link-reset"
+                ><span class="fab fa-spotify social-icon"></span
+              ></a>
+            </li>
+            <li class="navbar-social-list-item">
+              <a href="#" target="_blank" class="uk-link-reset"
+                ><span uk-icon="youtube"></span
+              ></a>
+            </li>
+          </ul>
         </div>
-
+        <div class="navbar-logo"><!-- <span>LOGO</span> --></div>
       </div>
     </div>
-  </div>
 
-  <div id="content">
-    <div class="uk-container">
-      <div class="uk-section ">
-        <div class="uk-container">
-
-          <h1 class="uk-text-uppercase uk-heading-line"><span>Blog / Noticias</span></h1>
-
-          <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; delay: 300">
-            <div>
-              <div id="news-background-0" class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
-                style="background-image: url();">
-                <div class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                  <h4 class="uk-margin-remove-bottom" id="news-title-0"></h4>
-                  <small id="news-date-0" class="uk-text-capitalize">Enero 2018</small>
-                  <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left">
-                    <a href="#" class="uk-link uk-text-small" target="_blank" id="news-link-0">LEER MÀS</a>
-                  </div>
-                </div>
-              </div>
-              <div id="news-body-0" class="news-body-content uk-background-muted"></div>
-            </div>
-            <div>
-              <div id="news-background-1" class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
-                style="background-image: url();">
-                <div class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                  <h4 class="uk-margin-remove-bottom" id="news-title-1"></h4>
-                  <small id="news-date-1" class="uk-text-capitalize">Enero 2018</small>
-                  <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left">
-                    <a href="#" class="uk-link uk-text-small" target="_blank" id="news-link-1">LEER MÀS</a>
-                  </div>
-                </div>
-              </div>
-              <div id="news-body-1" class="news-body-content uk-background-muted"></div>
-            </div>
-            <div>
-              <div id="news-background-2" class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
-                style="background-image: url();">
-                <div class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                  <h4 class="uk-margin-remove-bottom" id="news-title-2"></h4>
-                  <small id="news-date-2" class="uk-text-capitalize">Enero 2018</small>
-                  <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left">
-                    <a href="#" class="uk-link uk-text-small" target="_blank" id="news-link-2">LEER MÀS</a>
-                  </div>
-                </div>
-              </div>
-              <div id="news-body-2" class="news-body-content uk-background-muted"></div>
-            </div>
-          </div>
-          <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; delay: 300">
-            <div>
-              <div id="news-background-3" class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
-                style="background-image: url();">
-                <div class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                  <h4 class="uk-margin-remove-bottom" id="news-title-3"></h4>
-                  <small id="news-date-3" class="uk-text-capitalize">Enero 2018</small>
-                  <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left">
-                    <a href="#" class="uk-link uk-text-small" target="_blank" id="news-link-3">LEER MÀS</a>
-                  </div>
-                </div>
-              </div>
-              <div id="news-body-3" class="news-body-content uk-background-muted"></div>
-            </div>
-            <div>
-              <div id="news-background-4" class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
-                style="background-image: url();">
-                <div class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                  <h4 class="uk-margin-remove-bottom" id="news-title-4"></h4>
-                  <small id="news-date-4" class="uk-text-capitalize">Enero 2018</small>
-                  <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left">
-                    <a href="#" class="uk-link uk-text-small" target="_blank" id="news-link-4">LEER MÀS</a>
-                  </div>
-                </div>
-              </div>
-              <div id="news-body-4" class="news-body-content uk-background-muted"></div>
-            </div>
-            <div>
-              <div id="news-background-5" class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
-                style="background-image: url();">
-                <div class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                  <h4 class="uk-margin-remove-bottom" id="news-title-5"></h4>
-                  <small id="news-date-5" class="uk-text-capitalize">Enero 2018</small>
-                  <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left">
-                    <a href="#" class="uk-link uk-text-small" target="_blank" id="news-link-5">LEER MÀS</a>
-                  </div>
-                </div>
-              </div>
-              <div id="news-body-5" class="news-body-content uk-background-muted"></div>
-            </div>
-          </div>
-
-          <h1 class="uk-text-uppercase uk-heading-line uk-text-right"><span>Instagram</span></h1>
-          <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-slide-fade; delay: 300">
-            <div>
-              <div class="uk-background-muted uk-padding">Item</div>
-            </div>
-            <div>
-              <div class="uk-background-primary uk-padding uk-light">Item</div>
-            </div>
-            <div>
-              <div class="uk-background-secondary uk-padding uk-light">Item</div>
-            </div>
-          </div>
-          <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; delay: 300">
-            <div>
-              <div class="uk-background-muted uk-padding">Item</div>
-            </div>
-            <div>
-              <div class="uk-background-primary uk-padding uk-light">Item</div>
-            </div>
-            <div>
-              <div class="uk-background-secondary uk-padding uk-light">Item</div>
-            </div>
-          </div>
-
-        </div>
+    <!--MOBILE MENU-->
+    <nav class="uk-navbar uk-hidden@m uk-position-fixed nav-mobile">
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-toggle white">
+          <span class="nav-menu-open" uk-navbar-toggle-icon></span>
+          <button
+            class="uk-close-large uk-hidden nav-menu-close"
+            type="button"
+            uk-close
+          ></button>
+          <span class="uk-margin-small-left">MENÚ</span>
+        </a>
       </div>
+    </nav>
 
+    <div
+      class="uk-background-cover uk-light uk-flex"
+      uk-height-viewport
+      style="background-image: url('img/background.jpg');"
+    >
+      <img
+        class="uk-width-1-3@s uk-position-bottom-left uk-position-large large-logo uk-visible@m"
+        src="img/logo.png"
+      />
+      <img
+        class="uk-width-1-3 uk-width-1-4@s uk-position-bottom-left uk-position-large uk-hidden@m"
+        src="img/logo.png"
+      />
     </div>
 
+    <div class="c-menu">
+      <div class="c-menu-wrap js-menu-wrap">
+        <div class="o-box uk-text-center">
+          <ul class="uk-nav uk-nav-default nav-menu">
+            <li class="nav-item"><a href="#">Biografía</a></li>
+            <li class="nav-item"><a href="#">Blog</a></li>
+            <li class="nav-item"><a href="#">Calendario</a></li>
+            <li class="nav-item"><a href="#">Media (Prensa)</a></li>
+            <li class="nav-item"><a href="#">Contacto</a></li>
+          </ul>
+          <div class="navbar-footer">
+            <div class="uk-flex uk-flex-between uk-hidden@s">
+              <a
+                href="https://www.instagram.com/esmikegarcia/"
+                target="_blank"
+                class="uk-link-reset"
+                ><span uk-icon="instagram"></span
+              ></a>
+              <a
+                href="https://twitter.com/esmikegarcia"
+                target="_blank"
+                class="uk-link-reset"
+                ><span uk-icon="twitter"></span
+              ></a>
+              <a
+                href="https://www.facebook.com/EsMikeGarcia/"
+                target="_blank"
+                class="uk-link-reset"
+                ><span uk-icon="facebook"></span
+              ></a>
+              <a href="#" target="_blank" class="uk-link-reset"
+                ><span class="fab fa-spotify social-icon"></span
+              ></a>
+              <a href="#" target="_blank" class="uk-link-reset"
+                ><span uk-icon="youtube"></span
+              ></a>
+            </div>
 
-    <div class="uk-child-width-1-1" uk-grid>
-      <div>
-        <div class="uk-background-contain uk-background-muted uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle uk-background-fixed" uk-parallax="bgy: -100" style="background-image: url('img/content-backgroung.png');background-size: auto;">
-          <h1 class="uk-heading-line uk-text-center uk-text-uppercase" uk-grid uk-scrollspy="cls: uk-animation-fade; delay: 300"><span>Próximamente</span></h1>
+            <h3
+              class="uk-text-uppercase uk-text-center uk-visible@s white reduce-xs"
+            >
+              Recibe todas las noticias de esmikegarcia a tu correo
+            </h3>
+            <h4
+              class="uk-text-uppercase uk-text-center uk-hidden@s white reduce-xs"
+            >
+              Recibe todas las noticias de esmikegarcia a tu correo
+            </h4>
+            <form class="uk-flex uk-flex-center uk-margin-bottom">
+              <input class="uk-input" type="text" placeholder="NOMBRE" />
+              <input
+                class="uk-input uk-margin-left"
+                type="email"
+                placeholder="CORREO"
+              />
+            </form>
+            <div class="uk-flex-center uk-text-center" uk-grid>
+              <div>
+                <button class="uk-button uk-button-default white">
+                  ENVIAR
+                </button>
+              </div>
+            </div>
+            <p class="uk-text-uppercase uk-text-center white reduce-xs">
+              Respetamos tu privacidad
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="uk-container uk-margin-xlarge-top uk-margin-xlarge-bottom">
-      <div class=" release-text uk-hidden@m">
-        <h1>“ANTES Y DESPUÉS DE TI”</h1>
-        <h1>YA DISPONIBLE </h1>
-        <h1>EN TU PLATAFORMA FAVORITA</h1>
-      </div>
-      <div uk-grid>
-        <div class="uk-width-1-2@m" uk-scrollspy="cls: uk-animation-slide-left-small; delay: 300">
-          <img data-src="img/portada1.jpg" width="450" height="450" alt="" uk-img class="uk-box-shadow-large uk-visible@m">
-          <img data-src="img/portada1.jpg" alt="" uk-img class="uk-box-shadow-large uk-hidden@m">
-        </div>
-        <div class="uk-width-1-2@m uk-position-relative" uk-scrollspy="cls: uk-animation-slide-right-small;  delay: 300">
-          <div class="uk-position-absolute release-text uk-visible@m">
-            <h1 class="release-part-1">“ANTES Y DESPUÉS DE TI”</h1>
-            <h1 class="release-part-2">YA DISPONIBLE </h1>
-            <h1 class="release-part-3">EN TU PLATAFORMA FAVORITA</h1>
+    <div id="content">
+      <div class="uk-container">
+        <div class="uk-section ">
+          <div class="uk-container">
+            <h1 class="uk-text-uppercase uk-heading-line">
+              <span>Blog / Noticias</span>
+            </h1>
+
+            <div
+              class="uk-grid-collapse uk-child-width-expand@s uk-text-center"
+              uk-grid
+              uk-scrollspy="cls: uk-animation-fade; delay: 300"
+            >
+              <div>
+                <div
+                  id="news-background-0"
+                  class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
+                  style="background-image: url();"
+                >
+                  <div
+                    class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical"
+                  >
+                    <h4 class="uk-margin-remove-bottom" id="news-title-0"></h4>
+                    <small id="news-date-0" class="uk-text-capitalize"
+                      >Enero 2018</small
+                    >
+                    <div
+                      class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left"
+                    >
+                      <a
+                        href="#"
+                        class="uk-link uk-text-small"
+                        target="_blank"
+                        id="news-link-0"
+                        >LEER MÀS</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="news-body-0"
+                  class="news-body-content uk-background-muted"
+                ></div>
+              </div>
+              <div>
+                <div
+                  id="news-background-1"
+                  class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
+                  style="background-image: url();"
+                >
+                  <div
+                    class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical"
+                  >
+                    <h4 class="uk-margin-remove-bottom" id="news-title-1"></h4>
+                    <small id="news-date-1" class="uk-text-capitalize"
+                      >Enero 2018</small
+                    >
+                    <div
+                      class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left"
+                    >
+                      <a
+                        href="#"
+                        class="uk-link uk-text-small"
+                        target="_blank"
+                        id="news-link-1"
+                        >LEER MÀS</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="news-body-1"
+                  class="news-body-content uk-background-muted"
+                ></div>
+              </div>
+              <div>
+                <div
+                  id="news-background-2"
+                  class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
+                  style="background-image: url();"
+                >
+                  <div
+                    class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical"
+                  >
+                    <h4 class="uk-margin-remove-bottom" id="news-title-2"></h4>
+                    <small id="news-date-2" class="uk-text-capitalize"
+                      >Enero 2018</small
+                    >
+                    <div
+                      class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left"
+                    >
+                      <a
+                        href="#"
+                        class="uk-link uk-text-small"
+                        target="_blank"
+                        id="news-link-2"
+                        >LEER MÀS</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="news-body-2"
+                  class="news-body-content uk-background-muted"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="uk-grid-collapse uk-child-width-expand@s uk-text-center"
+              uk-grid
+              uk-scrollspy="cls: uk-animation-fade; delay: 300"
+            >
+              <div>
+                <div
+                  id="news-background-3"
+                  class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
+                  style="background-image: url();"
+                >
+                  <div
+                    class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical"
+                  >
+                    <h4 class="uk-margin-remove-bottom" id="news-title-3"></h4>
+                    <small id="news-date-3" class="uk-text-capitalize"
+                      >Enero 2018</small
+                    >
+                    <div
+                      class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left"
+                    >
+                      <a
+                        href="#"
+                        class="uk-link uk-text-small"
+                        target="_blank"
+                        id="news-link-3"
+                        >LEER MÀS</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="news-body-3"
+                  class="news-body-content uk-background-muted"
+                ></div>
+              </div>
+              <div>
+                <div
+                  id="news-background-4"
+                  class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
+                  style="background-image: url();"
+                >
+                  <div
+                    class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical"
+                  >
+                    <h4 class="uk-margin-remove-bottom" id="news-title-4"></h4>
+                    <small id="news-date-4" class="uk-text-capitalize"
+                      >Enero 2018</small
+                    >
+                    <div
+                      class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left"
+                    >
+                      <a
+                        href="#"
+                        class="uk-link uk-text-small"
+                        target="_blank"
+                        id="news-link-4"
+                        >LEER MÀS</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="news-body-4"
+                  class="news-body-content uk-background-muted"
+                ></div>
+              </div>
+              <div>
+                <div
+                  id="news-background-5"
+                  class="uk-height-small uk-background-cover uk-background-secondary uk-light uk-flex tumblr-cover uk-transition-toggle uk-overflow-hidden uk-background-blend-overlay"
+                  style="background-image: url();"
+                >
+                  <div
+                    class="uk-width-1-1 uk-text-center uk-margin-auto uk-margin-auto-vertical"
+                  >
+                    <h4 class="uk-margin-remove-bottom" id="news-title-5"></h4>
+                    <small id="news-date-5" class="uk-text-capitalize"
+                      >Enero 2018</small
+                    >
+                    <div
+                      class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary uk-text-left"
+                    >
+                      <a
+                        href="#"
+                        class="uk-link uk-text-small"
+                        target="_blank"
+                        id="news-link-5"
+                        >LEER MÀS</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="news-body-5"
+                  class="news-body-content uk-background-muted"
+                ></div>
+              </div>
+            </div>
+
+            <h1 class="uk-text-uppercase uk-heading-line uk-text-right">
+              <span>Instagram</span>
+            </h1>
+            <div
+              class="uk-grid-collapse uk-child-width-expand@s uk-text-center"
+              uk-grid
+              uk-scrollspy="cls: uk-animation-slide-fade; delay: 300"
+            >
+              <div><div class="uk-background-muted uk-padding">Item</div></div>
+              <div>
+                <div class="uk-background-primary uk-padding uk-light">
+                  Item
+                </div>
+              </div>
+              <div>
+                <div class="uk-background-secondary uk-padding uk-light">
+                  Item
+                </div>
+              </div>
+            </div>
+            <div
+              class="uk-grid-collapse uk-child-width-expand@s uk-text-center"
+              uk-grid
+              uk-scrollspy="cls: uk-animation-fade; delay: 300"
+            >
+              <div><div class="uk-background-muted uk-padding">Item</div></div>
+              <div>
+                <div class="uk-background-primary uk-padding uk-light">
+                  Item
+                </div>
+              </div>
+              <div>
+                <div class="uk-background-secondary uk-padding uk-light">
+                  Item
+                </div>
+              </div>
+            </div>
           </div>
-          <img data-src="img/2nd-section-music-logos.png" alt="" uk-img class="uk-position-center-right uk-visible@m">
-          <img data-src="img/2nd-section-music-logos.png" alt="" uk-img class="uk-margin-medium-top uk-hidden@m">
         </div>
-        <!-- <div class="uk-width-1-2@m uk-position-relative uk-hidden@m">
-            <img data-src="img/2nd-section-music-logos.png" alt="" uk-img>
-          </div> -->
       </div>
 
-      <!-- <div class="uk-flex-middle" uk-grid>
-          <div class="uk-width-2-3@m">
-              <img data-src="img/portada1.jpg" width="400" height="400" alt="" uk-img class="uk-box-shadow-large">
+      <div class="uk-child-width-1-1" uk-grid>
+        <div>
+          <div
+            class="uk-background-contain uk-background-muted uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle uk-background-fixed"
+            uk-parallax="bgy: -100"
+            style="background-image: url('img/content-backgroung.png');background-size: auto;"
+          >
+            <h2
+              class="uk-heading-line uk-text-center uk-text-uppercase"
+              uk-grid
+              uk-scrollspy="cls: uk-animation-fade; delay: 300"
+            >
+              <span>Próximamente</span>
+            </h2>
           </div>
-          <div class="uk-width-1-3@m ">
-              <img data-src="img/2nd-section-music-logos.png" width="400" height="400" alt="" uk-img>
+        </div>
+      </div>
+
+      <div class="uk-container uk-margin-xlarge-top uk-margin-xlarge-bottom">
+        <div class=" release-text uk-hidden@m">
+          <h1>“ANTES Y DESPUÉS DE TI”</h1>
+          <h1>YA DISPONIBLE</h1>
+          <h1>EN TU PLATAFORMA FAVORITA</h1>
+        </div>
+        <div uk-grid>
+          <div
+            class="uk-width-1-2@m"
+            uk-scrollspy="cls: uk-animation-slide-left-small; delay: 300"
+          >
+            <img
+              data-src="img/portada1.jpg"
+              width="450"
+              height="450"
+              alt=""
+              uk-img
+              class="uk-box-shadow-large uk-visible@m"
+            />
+            <img
+              data-src="img/portada1.jpg"
+              alt=""
+              uk-img
+              class="uk-box-shadow-large uk-hidden@m"
+            />
           </div>
-      </div> -->
+          <div
+            class="uk-width-1-2@m uk-position-relative"
+            uk-scrollspy="cls: uk-animation-slide-right-small;  delay: 300"
+          >
+            <div class="uk-position-absolute release-text uk-visible@m">
+              <h1 class="release-part-1">“ANTES Y DESPUÉS DE TI”</h1>
+              <h1 class="release-part-2">YA DISPONIBLE</h1>
+              <h1 class="release-part-3">EN TU PLATAFORMA FAVORITA</h1>
+            </div>
+            <img
+              data-src="img/2nd-section-music-logos.png"
+              alt=""
+              uk-img
+              class="uk-position-center-right uk-visible@m"
+            />
+            <img
+              data-src="img/2nd-section-music-logos.png"
+              alt=""
+              uk-img
+              class="uk-margin-medium-top uk-hidden@m"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+
+    <footer class="background-black uk-height-small">
+      <div class="uk-flex uk-flex-center">
+        <div class="navbar-social-list-item">
+          <a href="https://www.instagram.com/esmikegarcia/" target="_blank" class="uk-link-reset"><span uk-icon="instagram"></span></a>
+        </div>
+        <div class="navbar-social-list-item uk-margin-small-left">
+          <a href="https://twitter.com/esmikegarcia" target="_blank" class="uk-link-reset"><span uk-icon="twitter"></span></a>
+        </div>
+        <div class="navbar-social-list-item uk-margin-small-left">
+          <a href="https://www.facebook.com/EsMikeGarcia/" target="_blank" class="uk-link-reset"><span uk-icon="facebook"></span></a>
+        </div>
+        <div class="navbar-social-list-item uk-margin-small-left">
+          <a href="#" target="_blank" class="uk-link-reset"><span class="fab fa-spotify social-icon"></span></a>
+        </div>
+        <div class="navbar-social-list-item uk-margin-small-left">
+          <a href="#" target="_blank" class="uk-link-reset"><span uk-icon="youtube"></span></a>
+        </div>
+  
+      </div>
+    </footer>
 
     <script src="dist/bundle.js"></script>
-</body>
-
+  </body>
 </html>
