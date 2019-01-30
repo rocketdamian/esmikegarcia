@@ -88,11 +88,17 @@ client.blogPosts('esmikegarcia', {
     tempDiv.innerHTML = post.body;
     var title = post.title || tempDiv.getElementsByTagName('h1')[0].innerHTML;
     var image = tempDiv.getElementsByTagName('img').length > 0? tempDiv.getElementsByTagName('img')[0].getAttribute('src') : '';
-    var body =  tempDiv.getElementsByTagName('p').length > 0? tempDiv.getElementsByTagName('p')[0].innerHTML : '';
+    var body =  tempDiv.getElementsByTagName('p').length > 0? tempDiv.getElementsByTagName('p') : [];
+    var bodyText = '';
+
+    for (var i = 0; i < body.length; i++) {
+      bodyText += '<p>' + body[i].innerHTML + '</p>';
+    }
+
     var link = post.post_url;
     var date = moment.unix(post.timestamp).format("MMMM YYYY");
     document.getElementById('news-title-' + index).innerHTML = title;
-    document.getElementById('news-body-' + index).innerHTML = body;
+    document.getElementById('news-body-' + index).innerHTML = bodyText;
     document.getElementById('news-date-' + index).innerHTML = date;
     document.getElementById('news-link-' + index).setAttribute('href', link);
     document.getElementById('news-background-' + index).style.backgroundImage = 'url(' + image + ')';
