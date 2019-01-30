@@ -1,7 +1,9 @@
 // var tumblr = require('tumblr.js');
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
+import moment from 'moment';
 
+moment.locale('es')
 var isMenuOpen = false;
 
 // loads the Icon plugin
@@ -79,9 +81,21 @@ var client = tumblr.createClient({
 });
 
 client.blogPosts('esmikegarcia', {
-  limit: '1'
+  limit: '6'
 }, function(err, resp) {
-  var post = resp.posts[0];
-  document.getElementById('tumblr-post-title').innerHTML =post.title;
-  document.getElementById('tumblr-post-body').innerHTML =post.body;
+  resp.posts.forEach(function(post, index) {
+    var tempDiv = document.createElement('div');
+    tempDiv.innerHTML = post.body;
+    var title = post.title || tempDiv.getElementsByTagName('h1')[0].innerHTML;
+    var image = tempDiv.getElementsByTagName('img').length > 0? tempDiv.getElementsByTagName('img')[0].getAttribute('src') : '';
+    var body =  tempDiv.getElementsByTagName('p').length > 0? tempDiv.getElementsByTagName('p')[0].innerHTML : '';
+    var link = post.post_url;
+    var date = moment.unix(post.timestamp).format("MMMM YYYY");
+    document.getElementById('news-title-' + index).innerHTML = title;
+    document.getElementById('news-body-' + index).innerHTML = body;
+    document.getElementById('news-date-' + index).innerHTML = date;
+    document.getElementById('news-link-' + index).setAttribute('href', link);
+    document.getElementById('news-background-' + index).style.backgroundImage = 'url(' + image + ')';
+  });
+  
 });

@@ -547,8 +547,59 @@ a, .uk-icon {
 }
 
 #content {
-    background-image: url('../img/content-backgroung.png');
+    /* background-image: url('../img/content-backgroung.png'); */
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: 60px;
+}
+
+.tumblr-post-body {
+    max-height: 300px;
+    min-height: 300px;
+    position: relative;
+}
+
+.tumblr-post-body::before {
+    content: "";
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 50%, white 100%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 44.8px;
+}
+
+.uk-card-footer {
+    padding: 20px 0px;
+}
+
+h4.uk-heading-line {
+    margin-top: 0px;
+}
+
+.tumblr-cover {
+    height: 200px;
+    position: relative;
+}
+
+.release-text {
+    top: -50px;
+    width: 100%;
+}
+
+.release-part-1 {
+    position: absolute;
+    left: -100px;
+}
+
+.release-part-2 {
+    position: absolute;
+    top: 8px;
+    right: 124px;
+}
+
+.release-part-3 {
+    position: absolute;
+    top: 58px;
+    right: 24px;
+    width: 130%;
 }
