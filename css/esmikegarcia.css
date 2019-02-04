@@ -8,16 +8,27 @@
          url('../fonts/CenturyGothic.svg#CenturyGothic') format('svg');
 }
 
+/* body {
+  overflow-y: scroll;
+} */
+
 body,h1,h2,h3,h4,p {
   font-family: "CenturyGothic"!important;
 }
 
-a, .uk-icon {
-    transition: 0.3s;
+body.no-scroll {
+  overflow: hidden;
 }
 
+a, .uk-icon, .fab {
+  transition: 0.3s;
+}
 
-.scroll-indicator {
+.page-loader {
+  z-index: 99999;
+}
+
+.scroll-indicator, .page-loader {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -60,6 +71,10 @@ a, .uk-icon {
     backdrop-filter: blur(20px);
 }
 
+.on-content.navbar-container-left {
+  background-color: transparent;
+}
+
 .navbar-container-left {
   position: fixed;
   left: 0;
@@ -87,6 +102,10 @@ a, .uk-icon {
   display: flex;
   position: relative;
   color: white;
+}
+
+.on-content.navbar-container-left .navbar-button .navbar-menu-label {
+  color: #666666;
 }
 
 .navbar-button {
@@ -119,10 +138,24 @@ a, .uk-icon {
   margin: 10px 0px 20px 0;
 }
 
+.on-content.navbar-container-left .navbar-button-menu {
+  background-color: #666666;
+  border-color: #666666;
+}
+
 .navbar-button-menu {
   border-radius: 50%;
   padding: 8px;
   border: 1px solid white;
+}
+
+.nav-menu-open > svg > rect:last-child, .nav-menu-open > svg > rect:nth-child(2){
+    width: 16px;
+    x: 2;
+}
+
+.navbar-button-menu:hover {
+    opacity: 0.5;
 }
 
 .navbar-social {
@@ -153,6 +186,11 @@ a, .uk-icon {
   list-style: none;
   padding: 0;
   margin: 0 -15px;
+}
+
+.on-content.navbar-container-left .navbar-social-list-item {
+  background-color: #666666;
+  border-color: #666666;
 }
 
 .navbar-social-list-item {
@@ -243,7 +281,7 @@ a, .uk-icon {
   font-size: 46px;
   text-transform: uppercase;
   color: #ffffff!important;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 @media (max-width: 640px) {
@@ -624,4 +662,40 @@ footer .navbar-social-list-item {
 
 footer .navbar-social-list-item  span {
   vertical-align: top;
+}
+
+.instagram-grid-item {
+    height: 400px;
+    cursor: pointer;
+}
+
+.logo-wksc {
+    height: 32px;
+}
+
+.logo-jes {
+    height: 32px;
+    margin-left: 18px;
+}
+
+.logo-resuelvo {
+    height: 32px;
+}
+
+.logo-polychord {
+    height: 22px;
+    margin-top: 5px
+}
+
+.logo-bit {
+    height: 20px;
+    margin-left: 14px;
+    margin-top: 4px;
+}
+
+.footer-logos {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
 }
